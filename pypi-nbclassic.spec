@@ -4,7 +4,7 @@
 #
 Name     : pypi-nbclassic
 Version  : 0.3.4
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/87/20/8b4637355ee0a00dcf97a821f67f65e8be5ee303a5e8d0c5759f85e64d79/nbclassic-0.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/87/20/8b4637355ee0a00dcf97a821f67f65e8be5ee303a5e8d0c5759f85e64d79/nbclassic-0.3.4.tar.gz
 Summary  : Jupyter Notebook as a Jupyter Server extension.
@@ -16,14 +16,11 @@ Requires: pypi-nbclassic-license = %{version}-%{release}
 Requires: pypi-nbclassic-python = %{version}-%{release}
 Requires: pypi-nbclassic-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: nbclassic
-Provides: nbclassic-python
-Provides: nbclassic-python3
-BuildRequires : jupyter_server
-BuildRequires : jupyterlab_server
 BuildRequires : pypi(jupyter_packaging)
 BuildRequires : pypi(jupyter_server)
 BuildRequires : pypi(notebook)
+BuildRequires : pypi-jupyter_server
+BuildRequires : pypi-jupyterlab_server
 
 %description
 # Jupyter Notebook as a Jupyter Server Extension
@@ -85,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641457585
+export SOURCE_DATE_EPOCH=1641550451
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
