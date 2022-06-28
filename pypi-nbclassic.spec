@@ -4,7 +4,7 @@
 #
 Name     : pypi-nbclassic
 Version  : 0.3.7
-Release  : 22
+Release  : 23
 URL      : https://files.pythonhosted.org/packages/ea/ae/98dc1fa29030380d740debbed9f882bb21f648f945d6cd9a51c8e8b31761/nbclassic-0.3.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ea/ae/98dc1fa29030380d740debbed9f882bb21f648f945d6cd9a51c8e8b31761/nbclassic-0.3.7.tar.gz
 Summary  : Jupyter Notebook as a Jupyter Server extension.
@@ -87,7 +87,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656390047
+export SOURCE_DATE_EPOCH=1656392610
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
