@@ -1,5 +1,5 @@
 PKG_NAME := pypi-nbclassic
-URL = https://files.pythonhosted.org/packages/ae/5a/6bdc0b20e5f6894fef0be99e0a9132bd8467fd082164fdbdbd37464416f6/nbclassic-0.4.7.tar.gz
+URL = https://files.pythonhosted.org/packages/0d/52/2fd9c7a81763d7e20cc28757d42ae25d8f0fcab2913092b2e239b906892a/nbclassic-0.4.8.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
