@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-nbclassic
-Version  : 0.5.4
-Release  : 40
-URL      : https://files.pythonhosted.org/packages/8e/ad/05862e9b3ed28ff9192f755e607ba796edd7bf9459a96531ecead01fea78/nbclassic-0.5.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/8e/ad/05862e9b3ed28ff9192f755e607ba796edd7bf9459a96531ecead01fea78/nbclassic-0.5.4.tar.gz
+Version  : 0.5.5
+Release  : 41
+URL      : https://files.pythonhosted.org/packages/c8/cf/14c9a093541d1fa865d1f603f51c1f3d978eba9703d30fcb37f6c0f26bd6/nbclassic-0.5.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c8/cf/14c9a093541d1fa865d1f603f51c1f3d978eba9703d30fcb37f6c0f26bd6/nbclassic-0.5.5.tar.gz
 Summary  : Jupyter Notebook as a Jupyter Server extension.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause MIT
@@ -92,10 +92,10 @@ python3 components for the pypi-nbclassic package.
 
 
 %prep
-%setup -q -n nbclassic-0.5.4
-cd %{_builddir}/nbclassic-0.5.4
+%setup -q -n nbclassic-0.5.5
+cd %{_builddir}/nbclassic-0.5.5
 pushd ..
-cp -a nbclassic-0.5.4 buildavx2
+cp -a nbclassic-0.5.5 buildavx2
 popd
 
 %build
@@ -103,7 +103,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680225030
+export SOURCE_DATE_EPOCH=1680705769
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
