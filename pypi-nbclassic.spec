@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-nbclassic
-Version  : 0.5.5
-Release  : 41
-URL      : https://files.pythonhosted.org/packages/c8/cf/14c9a093541d1fa865d1f603f51c1f3d978eba9703d30fcb37f6c0f26bd6/nbclassic-0.5.5.tar.gz
-Source0  : https://files.pythonhosted.org/packages/c8/cf/14c9a093541d1fa865d1f603f51c1f3d978eba9703d30fcb37f6c0f26bd6/nbclassic-0.5.5.tar.gz
+Version  : 0.5.6
+Release  : 42
+URL      : https://files.pythonhosted.org/packages/c3/3d/8f8cbe374c60476e0165bdc18aec6952820a595b70032ad7881d3c5ed7aa/nbclassic-0.5.6.tar.gz
+Source0  : https://files.pythonhosted.org/packages/c3/3d/8f8cbe374c60476e0165bdc18aec6952820a595b70032ad7881d3c5ed7aa/nbclassic-0.5.6.tar.gz
 Summary  : Jupyter Notebook as a Jupyter Server extension.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause MIT
@@ -25,7 +25,7 @@ BuildRequires : pypi-jupyterlab_server
 %define debug_package %{nil}
 
 %description
-# Jupyter Notebook as a Jupyter Server Extension
+# The Classic Jupyter Notebook as a Jupyter Server Extension
 ![Testing nbclassic](https://github.com/jupyterlab/nbclassic/workflows/Testing%20nbclassic/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/nbclassic/badge/?version=latest)](https://nbclassic.readthedocs.io/en/latest/?badge=latest)
 
@@ -92,10 +92,10 @@ python3 components for the pypi-nbclassic package.
 
 
 %prep
-%setup -q -n nbclassic-0.5.5
-cd %{_builddir}/nbclassic-0.5.5
+%setup -q -n nbclassic-0.5.6
+cd %{_builddir}/nbclassic-0.5.6
 pushd ..
-cp -a nbclassic-0.5.5 buildavx2
+cp -a nbclassic-0.5.6 buildavx2
 popd
 
 %build
@@ -103,7 +103,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680705769
+export SOURCE_DATE_EPOCH=1682607613
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
