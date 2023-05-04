@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-nbclassic
-Version  : 0.5.6
-Release  : 42
-URL      : https://files.pythonhosted.org/packages/c3/3d/8f8cbe374c60476e0165bdc18aec6952820a595b70032ad7881d3c5ed7aa/nbclassic-0.5.6.tar.gz
-Source0  : https://files.pythonhosted.org/packages/c3/3d/8f8cbe374c60476e0165bdc18aec6952820a595b70032ad7881d3c5ed7aa/nbclassic-0.5.6.tar.gz
+Version  : 1.0.0
+Release  : 43
+URL      : https://files.pythonhosted.org/packages/8b/11/6e6084bad2b2f8faa787bd5f72fd1171c741801a03872b518965d7653ba5/nbclassic-1.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/8b/11/6e6084bad2b2f8faa787bd5f72fd1171c741801a03872b518965d7653ba5/nbclassic-1.0.0.tar.gz
 Summary  : Jupyter Notebook as a Jupyter Server extension.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause MIT
@@ -17,7 +17,9 @@ Requires: pypi-nbclassic-license = %{version}-%{release}
 Requires: pypi-nbclassic-python = %{version}-%{release}
 Requires: pypi-nbclassic-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(babel)
 BuildRequires : pypi(jupyter_packaging)
+BuildRequires : pypi(jupyter_server)
 BuildRequires : pypi-jupyter_server
 BuildRequires : pypi-jupyterlab_server
 # Suppress stripping binaries
@@ -92,10 +94,10 @@ python3 components for the pypi-nbclassic package.
 
 
 %prep
-%setup -q -n nbclassic-0.5.6
-cd %{_builddir}/nbclassic-0.5.6
+%setup -q -n nbclassic-1.0.0
+cd %{_builddir}/nbclassic-1.0.0
 pushd ..
-cp -a nbclassic-0.5.6 buildavx2
+cp -a nbclassic-1.0.0 buildavx2
 popd
 
 %build
@@ -103,15 +105,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682607613
+export SOURCE_DATE_EPOCH=1683215500
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
