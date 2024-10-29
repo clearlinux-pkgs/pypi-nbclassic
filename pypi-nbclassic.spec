@@ -7,7 +7,7 @@
 #
 Name     : pypi-nbclassic
 Version  : 1.1.0
-Release  : 48
+Release  : 49
 URL      : https://files.pythonhosted.org/packages/44/96/8e506bba6faf6bc299fbf783d2c22dd959f7b2aee63fe8913ebdc78cba8d/nbclassic-1.1.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/96/8e506bba6faf6bc299fbf783d2c22dd959f7b2aee63fe8913ebdc78cba8d/nbclassic-1.1.0.tar.gz
 Summary  : Jupyter Notebook as a Jupyter Server extension.
